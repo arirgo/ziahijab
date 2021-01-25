@@ -19,5 +19,14 @@ Route::get('/', function () {
 })->name('home');
 Auth::routes();
 
+
 Route::middleware('role:Admin')->get('/home', 'HomeController@index')->name('dashboard');
+Route::middleware('role:Admin')->prefix('category')->group(function(){
+	Route::get('/', 'CategoryController@index')->name('category');
+	Route::post('/category/store', 'CategoryController@store')->name('category.store');
+
+});
+
+
+
 

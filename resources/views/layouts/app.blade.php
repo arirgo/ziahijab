@@ -22,18 +22,60 @@
 <div class="c-wrapper">
     <header class="c-header c-header-light c-header-fixed">
         @include('layouts.header')
-        
+        @yield('subheader')
     </header>
 
+   
+
     <div class="c-body">
+
+
         <main class="c-main">
-            @yield('content')
+            <div class="container-fluid">
+                <div class="fade-in">
+                    @include('layouts.alert')
+                    @yield('content')
+                </div>
+            </div>
         </main>
     </div>
 
     <footer class="c-footer">
-        <div><a href="https://coreui.io">CoreUI</a> © 2020 creativeLabs.</div>
-        <div class="mfs-auto">Powered by&nbsp;<a href="https://coreui.io/">CoreUI</a></div>
+        <div><a href="{{ route('home') }}">Ziahijab</a> © 2021.</div>
+        <div class="mfs-auto">
+                <button class="btn btn-sm btn-facebook" type="button">
+                  <svg class="c-icon">
+                    <use xlink:href="{{ asset('vendors/@coreui/icons/svg/brand.svg#cib-facebook-f') }}"></use>
+                  </svg>
+                </button>
+                <button class="btn btn-sm btn-twitter" type="button">
+                  <svg class="c-icon">
+                    <use xlink:href="{{ asset('vendors/@coreui/icons/svg/brand.svg#cib-twitter') }}"></use>
+                  </svg>
+                </button>
+                <button class="btn btn-sm btn-linkedin" type="button">
+                  <svg class="c-icon">
+                    <use xlink:href="{{ asset('vendors/@coreui/icons/svg/brand.svg#cib-linkedin') }}"></use>
+                  </svg>
+                </button>
+                <button class="btn btn-sm btn-github" type="button">
+                  <svg class="c-icon">
+                    <use xlink:href="{{ asset('vendors/@coreui/icons/svg/brand.svg#cib-github') }}"></use>
+                  </svg>
+                </button>
+              
+                <button class="btn btn-sm btn-youtube" type="button">
+                  <svg class="c-icon">
+                    <use xlink:href="{{ asset('vendors/@coreui/icons/svg/brand.svg#cib-youtube') }}"></use>
+                  </svg>
+                </button>
+                
+                <button class="btn btn-sm btn-instagram" type="button">
+                  <svg class="c-icon">
+                    <use xlink:href="{{ asset('vendors/@coreui/icons/svg/brand.svg#cib-instagram') }}"></use>
+                  </svg>
+                </button>
+        </div>
     </footer>
 </div>
  <script src="{{ asset('vendors/@coreui/coreui/js/coreui.bundle.min.js') }}"></script>

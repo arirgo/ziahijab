@@ -1,17 +1,32 @@
  <ul class="c-sidebar-nav">
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{ route('dashboard') }}">
             <svg class="c-sidebar-nav-icon">
               <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-speedometer') }}"></use>
             </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
-        <li class="c-sidebar-nav-title">Theme</li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="colors.html">
+        <li class="c-sidebar-nav-title">Create Product</li>
+
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="colors.html">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-drop') }}"></use>
-            </svg> Colors</a></li>
-        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+              <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-album') }}"></use>
+            </svg>Product
+          </a>
+        </li>
+
+
+        <li class="c-sidebar-nav-item">
+          <a class="c-sidebar-nav-link" href="{{ route('category') }}">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-pencil') }}"></use>
-            </svg> Typographyaa</a></li>
+              <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-tag') }}"></use>
+            </svg> Category
+          </a>
+        </li>
+          <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="typography.html">
+            <svg class="c-sidebar-nav-icon">
+              <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-applications-settings') }}"></use>
+            </svg> Attribute</a></li>
+
+
         <li class="c-sidebar-nav-title">Components</li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
